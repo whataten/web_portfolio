@@ -1,0 +1,47 @@
+# common configuration
+
+server:
+   port: 8888
+
+management:
+   endpoint:
+      gateway:
+         enabled: true
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+
+spring:
+   cloud:
+      gateway:
+         globalcors:
+            cors-configurations:
+               '[/**]':
+                  allowedOrigins: '*'
+                  allowedHeaders: '*'
+                  allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS                   
+      
+         discovery.locator:
+            enabled: true
+            lowerCaseServiceId: true
+         routes:
+         
+         - id: service1
+           uri: lb://service1
+           predicates:
+           - Path=/api/service1/**
+           filters:
+           - RewritePath=/api/service1/?(?<remaining>.*), /$\{remaining}
+
+         - id: service2
+           uri: lb://service2
+           predicates:
+           - Path=/api/service2/**
+           filters:
+           - RewritePath=/api/service2/?(?<remaining>.*), /$\{remaining}

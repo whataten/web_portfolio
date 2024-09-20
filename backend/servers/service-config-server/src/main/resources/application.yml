@@ -2,7 +2,7 @@ spring:
    application:
       name: service-config-server
    profiles:
-      active: native
+      active: git
 
 ---
 # configuration: common
@@ -27,8 +27,9 @@ spring:
             encrypt.enabled: true
             git:
                uri: https://github.com/whataten/web_portfolio.git
-               searchPaths: backend/api1,
-                            backend/api2
+               searchPaths: backend/config/service-gateway-server, 
+                            backend/config/service1
+                            backend/config/service2
 
 logging:
    pattern:
@@ -55,8 +56,8 @@ spring:
        server:
           encrypt.enabled: true
           native:
-              searchLocations: file:///Users/ten/web_portfolio_config/service-api1,
-                               file:///Users/ten/web_portfolio_config/service-api2
+              searchLocations: file:///Users/ten/web_portfolio_config/service1,
+                               file:///Users/ten/web_portfolio_config/service2
 
 logging:
    pattern:

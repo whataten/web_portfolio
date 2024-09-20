@@ -21,8 +21,8 @@ datasource:
 #### 구성 정보 내용 확인
 
 - service-api1
-   - `default` : http://{service-config-server}/service-api1/default
+   - `default` : http://{service-config-server}/service1/default
 
-   - `development` : http://{service-config-server}/service-api1/development
+   - `development` : http://{service-config-server}/service1/development
 
-   - `production` : http://{service-config-server}/service-api1/production
+   - `production` : http://{service-config-server}/service1/production
