@@ -28,7 +28,7 @@ spring:
             git:
                uri: https://github.com/whataten/web_portfolio.git
                searchPaths: backend/config/service-gateway-server, 
-                            backend/config/service1
+                            backend/config/service1,
                             backend/config/service2
 
 logging:
