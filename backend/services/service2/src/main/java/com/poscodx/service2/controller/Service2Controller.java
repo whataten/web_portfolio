@@ -14,6 +14,6 @@ public class Service2Controller {
 	
 	@GetMapping("/")
 	public ResponseEntity<BaseResponse<String>> get() {
-		return ResponseEntity.status(HttpStatus.OK).body(new BaseResponse<>(HttpStatus.OK.value(), "testing...", "test succeed!"));
+		return ResponseEntity.status(HttpStatus.OK).body(new BaseResponse<>(HttpStatus.OK.value(), "testing...", "service 2!"));
 	}
 }
