@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.poscodx.service1.response.BaseResponse;
 
 @Controller
-@RequestMapping("/api/service1")
+@RequestMapping("/test")
 public class Service1Controller {
 	
-	@GetMapping("/test")
+	@GetMapping("/")
 	public ResponseEntity<BaseResponse<String>> get() {
 		return ResponseEntity.status(HttpStatus.OK).body(new BaseResponse<>(HttpStatus.OK.value(), "testing...", "test succeed!"));
 	}
