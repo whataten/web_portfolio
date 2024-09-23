@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Implementation-Title: embedded-keycloak-server
+Implementation-Version: 999-SNAPSHOT
+Main-Class: com.github.thomasdarimont.keycloak.embedded.runner.Main
+Created-By: Maven Integration for Eclipse
+
